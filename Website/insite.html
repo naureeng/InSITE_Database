@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<body>
+
+
+<!-- Title -->
+<title> InSITE Database </title>
+<link rel="stylesheet" href="layout.css">
+
+<!-- Container -->
+<div id="container">
+</div>
+
+<!-- Header -->
+<div id="header"> InSITE Database </div>
+
+
+<!-- Navigation -->
+<div id="navigation"> </div>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">About</a></li>
+    <li><a data-toggle="tab" href="#menu2">Adult Brain Images</a></li>
+	<li><a data-toggle="tab" href="#menu3">Adult VNC Images</a></li>
+	<li><a data-toggle="tab" href="#menu4">Larva Images</a></li>
+	<li><a data-toggle="tab" href="#menu5">Stock Information</a></li>
+	<li><a data-toggle="tab" href="#menu6">Keyword Search</a></li>
+  <li><a data-toggle="tab" href="#menu7">Contact</a></li>
+
+</ul>
+
+  <div class="tab-content">
+
+    <div id="home" class="tab-pane fade in active">
+      <div id="information">
+      <div class="clearfix">
+	<h1> InSITE Enhancer Trap Database </h1>
+	<img src="insite.png" alt="My Image" class="pull-left" class="img-responsive">
+	<h2> A database of expression patterns and genomic information for InSITE enhancer trap lines. </h2>
+	<h2> For details on the InSITE system, please see the publication:
+ 	<a href="http://www.nature.com/nmeth/journal/v8/n3/full/nmeth.1561.html">A versatile <i> in vivo </i> system
+	for directed dissection of gene expression patterns. </a> </h2>
+	<h2> InSITE Lines can be ordered from the Bloomington InSITE page.
+	</h2>
+
+  <a href="InSITE_DB_stocks_CSV.xls" download="InSITE_DB_stocks_CSV.xls">
+    <input type="button" value="Download Stock CSV" />
+ </a>
+  <a href="IsoLines.xls" download="IsoLines.xls">
+    <input type="button" value="Download IsoLine CSV" />
+  </a>
+
+
+
+</div>
+  <h1> Database Features </h1>
+  <h2> <b> About Page: </b> Details of InSITE Method including Mapping Information, Immunohistochemistry and Imaging <br>
+    <b> Adult Brain Database: </b> Collection of 1,186 Images <br>
+    <b> Adult VNC Database: </b> Collection of 665 Images <br>
+    <b> Larval Database: </b> Collection of 719 Images <br>
+    <b> Stock Information: </b> Dynamic Table of InSITE Lines <br>
+    <b> Keyword Search: </b> Query Search Option for Morphological Features of Interest <br>
+    <b> Contact: </b> Telephone and E-mail Information Available
+  </h2>
+
+	<div id="sidebar">
+	<h1> Recent Updates </h1>
+
+	</div>
+
+</div>
+</div>
+
+
+
+ <!-- Tab 1-->
+    <div id="menu1" class="tab-pane fade">
+	<div id="content">
+      <h1>InSITE System </h1>
+      <div class="clearfix">
+      <img src="aboutpage.jpg" alt="My Image" class="pull-left" class="img-responsive">
+	  <h3> Database Information </h3>
+    <h2> Please contact us for details on genomic mapping, swap lines, immunohistochemistry and imaging. </h2>
+	  <h2> Schematic illustration of the  <a href="http://www.nature.com/nmeth/journal/v8/n3/full/nmeth.1561.html"> procedure </a> for genetically swapping <i> GAL4 </i> with sequence <i> X </i>.
+	  <ul style="list-style-type:square">
+		<li><b> Adult Brain: </b> 1,186 Images </li>
+		<li><b> Adult VNC: </b> 665 Images </li>
+		<li><b> Larval: </b> 719 Images </li>
+	</ul></h2>
+	  	<h2><b> 864 Lines </b> Available for <a href="http://flystocks.bio.indiana.edu/Browse/gal4/insite.php"> Order from Bloomington </a> </h2>
+
+
+  </div>
+
+
+</div>
+
+</div>
+
+<!-- Tab 2-->
+    <div id="menu2" class="tab-pane fade">
+	<div id="content">
+    	<object type="text/html" data="adultbrain.html" width="100%" height="800px"></object>
+
+	</div>
+	</div>
+
+
+<!-- Tab 3 -->
+    <div id="menu3" class="tab-pane fade">
+	<div id="content">
+
+		<object type="text/html" data="adultvnc.html" width="100%" height="800px"></object>
+
+	</div>
+	</div>
+
+<!-- Tab 4 -->
+    <div id="menu4" class="tab-pane fade">
+	<div id="content">
+
+		<object type="text/html" data="larval.html" width="100%" height="800px"></object>
+
+
+	</div>
+	</div>
+
+<!-- Tab 5 -->
+	<div id= "menu5" class="tab-pane fade">
+	<div id="content">
+
+		<object type="text/html" data="table.html" width="100%" height="800px"></object>
+
+	</div>
+	</div>
+<!-- Tab 6 -->
+	<div id= "menu6" class="tab-pane fade">
+	<div id="content">
+    <div id="content">
+  		<h1> Search</h1>
+      <h3> Adult Brain</h3>
+  		<object type="text/html" data="search.html" width="100%" height="250px"></object>
+      <h3> Ventral Nerve Cord</h3>
+      <object type="text/html" data="vncsearch.html" width="100%" height="250px"></object>
+
+
+	</div>
+	</div>
+</div>
+
+<!-- Tab 7 -->
+    <div id="menu7" class="tab-pane fade">
+    <div id="content">
+  <object type="text/html" data="form.html" width="50%" height="800px"></object>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</head>
+</html>

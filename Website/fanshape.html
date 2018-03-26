@@ -1,0 +1,64 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+<script src="jquery.dataTables.min.js"></script>
+<script src="angular-datatables.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="datatables.bootstrap.css">
+<script src="fanshape.js"></script>
+<script src="directive.js"></script>
+
+<style>
+td:first-child {
+  /* your stuff here */
+  background-color:#F8F8F8;
+}
+
+tr.shown a{
+ color : red;
+}
+.green {
+ color : green;
+}
+
+</style>
+</head>
+<body ng-app="TestApp" ng-controller="testController">
+<div my-customer></div>
+<div class="container">
+<h1></h1>
+  <table class="table table-striped" datatable="ng" dt-options="vm.dtOptions" dt-instance="vm.dtInstance">
+
+	 <colgroup>
+                    <col width="50" />
+					          <col width="70" />
+                    <col width="160" />
+                    <col width="100" />
+
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Stock ID</th>
+					            <th>Map Location</th>
+                      <th>Bloomington Number</th>
+                    </tr>
+                  </thead>
+    <tbody>
+      <tr ng-repeat="user in userList">
+        <td><a class="green shortinfo" href="javascript:;" ng-click="childInfo(user, $event)" title="Click to view more"><i class="glyphicon glyphicon-plus-sign"></a></td>
+        <td>IT.{{user.name}}</td>
+        <td>{{user.position}}</td>
+		    <td><a href="http://flystocks.bio.indiana.edu/Reports/{{user.office}}.html" target="_blank">{{user.office}}</a></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+</body>
+</html>
+<script>
+
+</script>
