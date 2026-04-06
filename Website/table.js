@@ -1,44 +1,24 @@
-// Javascript for Child Row in table
-
 $(document).ready(function () {
-    var table = $('#example').DataTable({});
+    $('#example').DataTable({
+        // Enable column reordering (uses the ColReorder plugin)
+        colReorder: true,
 
-    // Add event listener for opening and closing details
-    $('#example').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row(tr);
+        // Enable responsive layout for small screens
+        responsive: true,
 
-        if (row.child.isShown()) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        } else {
-            // Open this row
-             format(row.child);
-            tr.addClass('shown');
-        }
+        // Default sort by first column (Stock ID) ascending
+        order: [[0, 'asc']],
+
+        // Disable sorting on the Images column (col index 3)
+        // since sorting images doesn't make sense
+        columnDefs: [
+            { orderable: false, targets: 3 }
+        ],
+
+        // Show 25 rows by default instead of 10
+        pageLength: 25,
+
+        // Customize the length menu options
+        lengthMenu: [10, 25, 50, 100]
     });
-
-    function format(callback) {
-        $.ajax({
-        url:'/echo/js/?js=[{ \"name\": \"test1\", \"value\": \"val1\" }, {\"name\": \"test2\", \"value\": \"val2\"}]',
-        dataType: "json",
-        complete: function (response) {
-            var data = JSON.parse(response.responseText);
-            console.log(data);
-                var thead = '',  tbody = '';
-                for (var key in data[0]) {
-                    thead += '<th>' + key + '</th>';
-                }
-                $.each(data, function (i, d) {
-                    tbody += '<tr><td>' + d.name + '</td><td>' + d.value + '</td></tr>';
-                });
-            console.log('<table>' + thead + tbody + '</table>');
-            callback($('<table>' + thead + tbody + '</table>')).show();
-        },
-        error: function () {
-            $('#output').html('Bummer: there was an error!');
-        }
-    });
-    }
 });

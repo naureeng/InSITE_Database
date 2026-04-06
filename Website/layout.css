@@ -34,15 +34,6 @@ ul {
 	padding-bottom:10px;
 }
 
-#sidebar {
-	position: absolute;
-	top:140px;
-	bottom:30px;
-	right:190px;
-	width: 50px;
-
-}
-
 #footer {
 
 	position: absolute;
@@ -52,7 +43,6 @@ ul {
   width: 100%;
 
 }
-
 
 .
 /* Dropdown Menu for Image Database */
@@ -100,8 +90,6 @@ ul {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-
-
 
 
 #container {
